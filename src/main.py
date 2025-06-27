@@ -13,6 +13,5 @@ def main():
     logger.error("error")
     logger.warning("warning")
 
-
 if __name__ == "__main__":
     main()
