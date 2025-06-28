@@ -1,6 +1,7 @@
 # import libraries
 import requests
 import logging
+import json
 
 # import modules
 from ..config import config
@@ -21,10 +22,10 @@ class NotionApiClient:
             "Notion-Version": api_version
         }
 
-    def _send_request(self, method, endpoint):
+    def _send_request(self, method, endpoint, payload=None):
         url = f"{self.base_url}/{endpoint}"
         try:
-            response = requests.request(method, url, headers=self.headers)
+            response = requests.request(method, url, headers=self.headers, json=payload)
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
@@ -35,4 +36,11 @@ class NotionApiClient:
     
     def test_connection(self):
         response = self._send_request("GET", "users/me")
+        # logger.debug(f"Type of response: {type(response)}")
+        # logger.debug(json.dumps(response.json(),indent=4))
         return response.json() if response and response.status_code == 200 else None
+    
+    def append_block_children(self, parent_page_id, layout_payload):
+        payload = {"children": layout_payload}
+        # logger.debug(json.dumps(payload,indent=4))
+        return self._send_request("PATCH", f"blocks/{parent_page_id}/children", payload)

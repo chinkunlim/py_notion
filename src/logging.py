@@ -12,7 +12,7 @@ def setup_logging():
 
     log_folder = config.get_config("log_folder", section="Logging", default="logs")
     log_filename = config.get_config("log_filename", section="Logging", default="app.log")
-    log_level = config.get_config("log_level", section="Logging", default="INFO")
+    log_level = config.get_config("log_level", section="Logging", default="INFO").upper()
     log_format = config.get_config("log_format", section="Logging", default="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     log_encoding = config.get_config("log_encoding", section="Logging", default="utf-8")
 
@@ -30,3 +30,8 @@ def setup_logging():
     )
     # logger = logging.getLogger(__name__)
     # logger.info(f"Logging configured...")
+    # logger.info(f"log_folder   : {log_folder}")
+    # logger.info(f"log_filename : {log_filename}")
+    # logger.info(f"log_level    : {log_level}")
+    # logger.info(f"log_format   : {log_format}")
+    # logger.info(f"log_encoding : {log_encoding}")

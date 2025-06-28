@@ -1,0 +1,266 @@
+{
+    "layout": [
+        {
+            "type": "heading_1",
+            "heading_1": {
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "Header"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "divider",
+            "divider": {}
+        },
+        {
+            "type": "column_list",
+            "column_list": {
+                "children": [
+                    {
+                        "type": "column",
+                        "column": {
+                            "children": [
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 01"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 02"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 03"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "column",
+                        "column": {
+                            "children": [
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 04"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 05"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "heading_2",
+                                    "heading_2": {
+                                        "rich_text": [
+                                            {
+                                                "type": "text",
+                                                "text": {
+                                                    "content": "Title 06"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "divider",
+                                    "divider": {}
+                                },
+                                {
+                                    "type": "callout",
+                                    "callout": {
+                                        "icon": {
+                                            "type": "emoji",
+                                            "emoji": "🔗"
+                                        },
+                                        "rich_text":[
+                                            {
+                                                "type": "text",
+                                                "text":{
+                                                    "content": "Add contents"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+
+                ]
+            }
+        },
+        {
+            "type": "divider",
+            "divider": {}
+        },
+        {
+            "type": "heading_1",
+            "heading_1": {
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "Footer"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "database": {
+    }
+}
