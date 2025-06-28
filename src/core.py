@@ -2,13 +2,15 @@
 import logging
 import json
 from pathlib import Path
+from rich.console import Console
+from tqdm import tqdm
 
 # import modules
 from .config import config
 from .notion.notion_api_client import NotionApiClient
 
 logger = logging.getLogger(__name__)
-
+console = Console()
 
 def execute_test_connection(api_key):
     logger.info(f"Test connection...")
@@ -39,3 +41,35 @@ def execute_build_dashboard_layout(api_key, parent_page_id):
             logger.error(f"Build dashboard layout failed...")
     except FileNotFoundError as e:
         logger.error(f"Failed to read schema.json...")
+
+def execute_delete_blocks(api_key, parent_page_id):
+    logger.info(f"Detecting blocks to delete...")
+    client = NotionApiClient(api_key)
+    response = client.get_block_children(parent_page_id)
+    logger.debug(f"response: {response}")
+    logger.debug(f"response's type: {type(response)}")
+    if not response or response.status_code != 200:
+        logger.info(f"Failed to get contents")
+    
+    if response is not None and response.status_code == 200:
+        blocks = response.json().get("results",[])
+        logger.info(f"Blocks: \n {json.dumps(blocks, indent=4)}")
+        logger.info(f"len of blocks: {len(blocks)}")
+    
+    if len(blocks) == 0:
+        logger.info(f"No blocks detected...")
+
+    logger.info(f"Get {len(blocks)} items...")
+    logger.warning(f"Detected {len(blocks)} to delete...")
+    if console.input(f"Delete all blocks? (y/n)").lower() == "y":
+        if console.input(f"Delete all blocks? (y/n)").lower() == "y":
+            logger.info(f"Deleting all blocks...")
+            for block in tqdm(blocks, desc="Deleting...", unit="block"):
+                client.delete_block(block["id"])
+                logger.info(f"Block {block["id"]} deleted")
+            logger.info(f"All blocks deleted...")
+        else:
+            logger.info(f"Cancelled...")
+    else:
+        logger.info(f"Cancelled")
+    logger.info("Done...")

@@ -44,3 +44,9 @@ class NotionApiClient:
         payload = {"children": layout_payload}
         # logger.debug(json.dumps(payload,indent=4))
         return self._send_request("PATCH", f"blocks/{parent_page_id}/children", payload)
+
+    def get_block_children(self, parent_page_id):
+        return self._send_request("GET", f"blocks/{parent_page_id}/children", )
+    
+    def delete_block(self, block_id):
+        return self._send_request("DELETE", f"blocks/{block_id}")
