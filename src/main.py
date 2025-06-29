@@ -22,9 +22,10 @@ def main():
     # logger.warning("warning")
     # config.set_env("abc","456")
 
-    # execute_test_connection(api_key)
-    # execute_build_dashboard_layout(api_key, parent_page_id)
+    execute_test_connection(api_key)
     execute_delete_blocks(api_key, parent_page_id)
+    execute_build_dashboard_layout(api_key, parent_page_id)
+    execute_create_database(api_key, parent_page_id)
 
 if __name__ == "__main__":
     main()

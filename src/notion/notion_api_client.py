@@ -31,7 +31,7 @@ class NotionApiClient:
         except requests.exceptions.RequestException as e:
             logger.error(f"Failed to request: {e}")
             if hasattr(e, "response") and e.response is not None:
-                logger.error(f"Responde: {e.response.text}")
+                logger.error(f"Response: {e.response.text}")
             return None
     
     def test_connection(self):
@@ -50,3 +50,12 @@ class NotionApiClient:
     
     def delete_block(self, block_id):
         return self._send_request("DELETE", f"blocks/{block_id}")
+    
+    def create_database(self, payload):
+        response = self._send_request("POST", "databases", payload)
+        return response.json() if response and response.status_code == 200 else None
+    
+    def update_database(self, database_id, properties):
+        payload = {"properties": properties}
+        response = self._send_request("PATCH", f"databases/{database_id}", payload)
+        return response.json() if response and response.status_code == 200 else None
